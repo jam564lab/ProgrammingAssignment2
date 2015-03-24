@@ -65,7 +65,8 @@ cacheSolve <- function(x, ...) {
     }
     data <- x$get()
 ## get the invert (of mean) using solve() 
-   mkinv <- solve(data, ...)
+##   mkinv <- solve(data, ...)  [forgot to change mkinv to m
+    m <- solve(data, ...)
     x$setinverse(m)
     m
   }
